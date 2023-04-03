@@ -1,0 +1,64 @@
+POST http://localhost:3000/v1/room/batch HTTP/1.1
+content-type: application/json
+
+[
+    {
+        "name": "test place",
+        "x": 2,
+        "y": 15,
+        "z": 1
+    }
+]
+
+###
+
+PATCH http://localhost:3000/v1/room/642ac701288fa88b676ede6b HTTP/1.1
+content-type: application/json
+
+{
+    "monsters": [
+        {
+            "id": "99",
+            "name": "ERROR LIST DATA",
+            "num": 15
+        }
+    ]
+}
+
+###
+
+POST http://localhost:3000/v1/floor HTTP/1.1
+content-type: application/json
+
+{
+    "name": "test floor",
+    "bindZ": 94,
+    "open": true,
+    "boss": [
+        {
+            "id": "69",
+            "name": "boss",
+            "num": 10
+        }
+    ],
+    "nextFloorId": "96"
+}
+
+### 
+
+PATCH http://localhost:3000/v1/floor/642acaa1288fa88b676ede77
+content-type: application/json
+
+{
+    "name": "test",
+    "open": false,
+    "nextFloorId": "35",
+    "bindZ": 13,
+    "boss": [
+        {
+            "id": "8",
+            "name": "PASS DATA",
+            "num": 68
+        }
+    ]
+}

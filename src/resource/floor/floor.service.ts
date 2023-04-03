@@ -46,6 +46,7 @@ export class FloorService {
     }
 
     update(id: string, updateFloorDto: UpdateFloorDto | CreateFloorDto) {
+        console.log('updateFloor', updateFloorDto);
         const updatedFloor = this.floorModel
             .findByIdAndUpdate(id, updateFloorDto, {
                 new: true, // 返回修改后的文档
