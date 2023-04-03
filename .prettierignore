@@ -1,0 +1,10 @@
+node_modules
+dist
+.vscode
+*.json
+.eslintrc.js
+.gitignore
+*.md
+*.lock
+*.http
+*.yaml
