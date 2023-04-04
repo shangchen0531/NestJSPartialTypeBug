@@ -46,7 +46,7 @@ content-type: application/json
 
 ### 
 
-PATCH http://localhost:3000/v1/floor/642acaa1288fa88b676ede77
+PATCH http://localhost:3000/v1/floor/642acaa1288fa88b676ede77 
 content-type: application/json
 
 {
