@@ -141,7 +141,7 @@ res:
 &nbsp;
 5) update `Floor` with id: `642acaa1288fa88b676ede77`
 ```http
-PATCH http://localhost:3000/v1/floor/642acaa1288fa88b676ede77
+PATCH http://localhost:3000/v1/floor/642acaa1288fa88b676ede77 HTTP/1.1
 content-type: application/json
 
 {
