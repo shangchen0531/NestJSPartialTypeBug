@@ -8,3 +8,4 @@ dist
 *.lock
 *.http
 *.yaml
+*.yml

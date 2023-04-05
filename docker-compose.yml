@@ -1,0 +1,33 @@
+version: '3.0'
+
+services:
+  app:
+    image: node:18-alpine
+    command: sh -c "yarn && yarn build && node dist/main.js"
+    ports:
+      - 3010:3000
+    working_dir: /app
+    depends_on:
+      - mongo
+    networks:
+      - nesjs-network
+    volumes:
+      - ./:/app
+    environment:
+      MONGO_CONNECT_URL: mongodb://root:root@mongo/database-test
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: database-test
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - nesjs-network
+
+networks:
+    nesjs-network:
+      driver: bridge

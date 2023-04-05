@@ -8,11 +8,6 @@ const YAML_CONFIG_FILENAME = 'config.yaml'; // 配置文件名常量
 
 // 配置项解析策略
 const yamlSchema = z.object({
-    db: z.object({
-        port: z.number().catch(27017),
-        host: z.string().catch('localhost'),
-        name: z.string().catch('jiuzhou-test'),
-    }),
     server: z.object({
         port: z.number().catch(3000),
     }),

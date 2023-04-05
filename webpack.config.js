@@ -75,17 +75,17 @@ module.exports = {
                             destination: './dist/config.yaml',
                         },
                     ],
-                    archive: [
-                        {
-                            source: './dist',
-                            destination: `./dist/zips/${time}.zip`,
-                            options: {
-                                globOptions: {
-                                    pattern: '*.{js,yaml}',
-                                },
-                            },
-                        },
-                    ],
+                    // archive: [
+                    //     {
+                    //         source: './dist',
+                    //         destination: `./dist/zips/${time}.zip`,
+                    //         options: {
+                    //             globOptions: {
+                    //                 pattern: '*.{js,yaml}',
+                    //             },
+                    //         },
+                    //     },
+                    // ],
                 },
             },
             runTasksInSeries: true,

@@ -30,23 +30,20 @@ node dist/main.js
 
 2) add `Room` data using below command with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) vscode's extension or [Postman](https://www.postman.com/)
 ```http
-POST http://localhost:3000/v1/room/batch HTTP/1.1
+POST http://localhost:3000/v1/room HTTP/1.1
 content-type: application/json
 
-[
-    {
-        "name": "test place",
-        "x": 2,
-        "y": 15,
-        "z": 1
-    }
-]
+{
+    "name": "test place",
+    "x": 2,
+    "y": 15,
+    "z": 1
+}
 ```
 
 then, you should see the response like that:
 ```js
-[
-  {
+{
     "name": "test place",
     "players": [],
     "x": 2,
@@ -55,8 +52,7 @@ then, you should see the response like that:
     "_id": "642ac701288fa88b676ede6b",
     "monsters": [],
     "__v": 0
-  }
-]
+}
 ```
 
 &nbsp;
@@ -79,16 +75,16 @@ content-type: application/json
 and the response:
 ```js
 {
-  "_id": "642ac701288fa88b676ede6b",
-  "name": "test place",
-  "players": [],
-  "x": 2,
-  "y": 15,
-  "z": 1,
-  "monsters": [
-    {}
-  ],
-  "__v": 0
+    "_id": "642ac701288fa88b676ede6b",
+    "name": "test place",
+    "players": [],
+    "x": 2,
+    "y": 15,
+    "z": 1,
+    "monsters": [
+      {}
+    ],
+    "__v": 0
 }
 ```
 
